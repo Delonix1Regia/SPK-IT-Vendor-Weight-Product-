@@ -1,0 +1,576 @@
+ERROR - 2024-12-11 13:09:12 --> mysqli_sql_exception: View 'it_vendor.vw_nilai_preferensi' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them in C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\WP UAS\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\WP UAS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\WP UAS\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\WP UAS\app\Models\DataPreferensiModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\WP UAS\app\Controllers\Home.php(56): App\Models\DataPreferensiModel->tampilpreferensi()
+#8 C:\laragon\www\WP UAS\system\CodeIgniter.php(933): App\Controllers\Home->viewpreferensi()
+#9 C:\laragon\www\WP UAS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\laragon\www\WP UAS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\WP UAS\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\WP UAS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\WP UAS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\WP UAS\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-12-11 13:09:13 --> CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_nilai_preferensi' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[Method: GET, Route: Home/viewpreferensi]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_nilai_preferensi`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DataPreferensiModel.php(19): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Home.php(56): App\Models\DataPreferensiModel->tampilpreferensi()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpreferensi()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 13:09:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_nilai_preferensi' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_nilai_preferensi`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_nilai_preferensi`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_nilai_preferensi`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DataPreferensiModel.php(19): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Home.php(56): App\Models\DataPreferensiModel->tampilpreferensi()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpreferensi()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 13:09:13 --> [Caused by] mysqli_sql_exception: View 'it_vendor.vw_nilai_preferensi' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `vw_nilai_preferensi`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_nilai_preferensi`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_nilai_preferensi`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_nilai_preferensi`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DataPreferensiModel.php(19): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Home.php(56): App\Models\DataPreferensiModel->tampilpreferensi()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpreferensi()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+ERROR - 2024-12-11 13:09:22 --> mysqli_sql_exception: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them in C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\WP UAS\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\WP UAS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\WP UAS\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\WP UAS\app\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\WP UAS\app\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+#8 C:\laragon\www\WP UAS\system\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+#9 C:\laragon\www\WP UAS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\laragon\www\WP UAS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\WP UAS\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\WP UAS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\WP UAS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\WP UAS\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-12-11 13:09:22 --> CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[Method: GET, Route: Home/viewpembobotan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 13:09:22 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 13:09:22 --> [Caused by] mysqli_sql_exception: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `vw_pembobotan_nilai`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+ERROR - 2024-12-11 13:09:59 --> mysqli_sql_exception: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them in C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\WP UAS\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\WP UAS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\WP UAS\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\WP UAS\app\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\WP UAS\app\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+#8 C:\laragon\www\WP UAS\system\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+#9 C:\laragon\www\WP UAS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\laragon\www\WP UAS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\WP UAS\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\WP UAS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\WP UAS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\WP UAS\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-12-11 13:09:59 --> CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[Method: GET, Route: Home/viewpembobotan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 13:09:59 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 13:09:59 --> [Caused by] mysqli_sql_exception: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `vw_pembobotan_nilai`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+ERROR - 2024-12-11 13:10:04 --> mysqli_sql_exception: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them in C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\WP UAS\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\WP UAS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\WP UAS\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\WP UAS\app\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\WP UAS\app\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+#8 C:\laragon\www\WP UAS\system\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+#9 C:\laragon\www\WP UAS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\laragon\www\WP UAS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\WP UAS\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\WP UAS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\WP UAS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\WP UAS\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-12-11 13:10:04 --> CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[Method: GET, Route: Home/viewpembobotan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 13:10:04 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 13:10:04 --> [Caused by] mysqli_sql_exception: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `vw_pembobotan_nilai`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 13:10:50 --> ErrorException: Undefined array key "kode_kriteria"
+[Method: GET, Route: Home/viewnormalisasi]
+in APPPATH\Views\view_data_normalisasi.php on line 42.
+ 1 APPPATH\Views\view_data_normalisasi.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_kriteria"', 'C:\\laragon\\www\\WP UAS\\app\\Views\\view_data_normalisasi.php', 42)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\WP UAS\\app\\Views\\view_data_normalisasi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('view_data_normalisasi', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('view_data_normalisasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewnormalisasi()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+ERROR - 2024-12-11 17:01:36 --> mysqli_sql_exception: View 'it_vendor.vw_nilai_preferensi' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them in C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\WP UAS\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\WP UAS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\WP UAS\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\WP UAS\app\Models\DataPreferensiModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\WP UAS\app\Controllers\Home.php(56): App\Models\DataPreferensiModel->tampilpreferensi()
+#8 C:\laragon\www\WP UAS\system\CodeIgniter.php(933): App\Controllers\Home->viewpreferensi()
+#9 C:\laragon\www\WP UAS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\laragon\www\WP UAS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\WP UAS\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\WP UAS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\WP UAS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\WP UAS\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-12-11 17:01:36 --> CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_nilai_preferensi' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[Method: GET, Route: Home/viewpreferensi]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_nilai_preferensi`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DataPreferensiModel.php(19): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Home.php(56): App\Models\DataPreferensiModel->tampilpreferensi()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpreferensi()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 17:01:36 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_nilai_preferensi' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_nilai_preferensi`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_nilai_preferensi`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_nilai_preferensi`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DataPreferensiModel.php(19): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Home.php(56): App\Models\DataPreferensiModel->tampilpreferensi()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpreferensi()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 17:01:36 --> [Caused by] mysqli_sql_exception: View 'it_vendor.vw_nilai_preferensi' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `vw_nilai_preferensi`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_nilai_preferensi`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_nilai_preferensi`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_nilai_preferensi`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DataPreferensiModel.php(19): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Home.php(56): App\Models\DataPreferensiModel->tampilpreferensi()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpreferensi()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 21:03:31 --> ErrorException: Undefined array key "kode_alternatif"
+[Method: GET, Route: Home/viewnormalisasi]
+in APPPATH\Views\view_data_normalisasi.php on line 41.
+ 1 APPPATH\Views\view_data_normalisasi.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_alternatif"', 'C:\\laragon\\www\\WP UAS\\app\\Views\\view_data_normalisasi.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\WP UAS\\app\\Views\\view_data_normalisasi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('view_data_normalisasi', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('view_data_normalisasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewnormalisasi()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+ERROR - 2024-12-11 21:03:57 --> mysqli_sql_exception: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them in C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\WP UAS\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\WP UAS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\WP UAS\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\WP UAS\app\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\WP UAS\app\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+#8 C:\laragon\www\WP UAS\system\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+#9 C:\laragon\www\WP UAS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\laragon\www\WP UAS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\WP UAS\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\WP UAS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\WP UAS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\WP UAS\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-12-11 21:03:58 --> CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[Method: GET, Route: Home/viewpembobotan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 21:03:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 21:03:58 --> [Caused by] mysqli_sql_exception: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `vw_pembobotan_nilai`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Home.php(76): App\Models\DataPembobotanModel->tampilpembobotan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 22:10:39 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "data_vektor_view.php"
+[Method: GET, Route: Home/viewvektor]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('data_vektor_view.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('data_vektor_view', [], true)
+ 3 APPPATH\Controllers\Home.php(99): view('data_vektor_view', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewvektor()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 22:13:21 --> ErrorException: Undefined array key "nilai_preferensi"
+[Method: GET, Route: Home/viewvektor]
+in APPPATH\Views\view_data_vektor.php on line 41.
+ 1 APPPATH\Views\view_data_vektor.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nilai_preferensi"', 'C:\\laragon\\www\\WP UAS\\app\\Views\\view_data_vektor.php', 41)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\WP UAS\\app\\Views\\view_data_vektor.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('view_data_vektor', [], true)
+ 5 APPPATH\Controllers\Home.php(102): view('view_data_vektor', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewvektor()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+ERROR - 2024-12-11 22:32:57 --> mysqli_sql_exception: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them in C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\laragon\www\WP UAS\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\laragon\www\WP UAS\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\laragon\www\WP UAS\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\laragon\www\WP UAS\system\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\WP UAS\system\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\laragon\www\WP UAS\app\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+#7 C:\laragon\www\WP UAS\app\Controllers\Home.php(78): App\Models\DataPembobotanModel->tampilpembobotan()
+#8 C:\laragon\www\WP UAS\system\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+#9 C:\laragon\www\WP UAS\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#10 C:\laragon\www\WP UAS\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\laragon\www\WP UAS\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\laragon\www\WP UAS\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\laragon\www\WP UAS\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 C:\laragon\www\WP UAS\system\rewrite.php(44): require_once('C:\\laragon\\www\\...')
+#15 {main}
+CRITICAL - 2024-12-11 22:32:57 --> CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+[Method: GET, Route: Home/viewpembobotan]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 2 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 4 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 5 APPPATH\Controllers\Home.php(78): App\Models\DataPembobotanModel->tampilpembobotan()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 22:32:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 4 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 6 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 7 APPPATH\Controllers\Home.php(78): App\Models\DataPembobotanModel->tampilpembobotan()
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
+CRITICAL - 2024-12-11 22:32:57 --> [Caused by] mysqli_sql_exception: View 'it_vendor.vw_pembobotan_nilai' references invalid table(s) or column(s) or function(s) or definer/invoker of view lack rights to use them
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT *
+FROM `vw_pembobotan_nilai`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `vw_pembobotan_nilai`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `vw_pembobotan_nilai`', [], false)
+ 5 SYSTEMPATH\Model.php(286): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(676): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\DataPembobotanModel.php(19): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\Home.php(78): App\Models\DataPembobotanModel->tampilpembobotan()
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewpembobotan()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')

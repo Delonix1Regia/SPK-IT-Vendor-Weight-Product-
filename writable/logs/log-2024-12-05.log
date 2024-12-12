@@ -1,0 +1,15 @@
+CRITICAL - 2024-12-05 08:05:40 --> ErrorException: Undefined array key "kode_kriteria"
+[Method: GET, Route: Home/viewnormalisasi]
+in APPPATH\Views\view_data_normalisasi.php on line 42.
+ 1 APPPATH\Views\view_data_normalisasi.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "kode_kriteria"', 'C:\\laragon\\www\\WP UAS\\app\\Views\\view_data_normalisasi.php', 42)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\laragon\\www\\WP UAS\\app\\Views\\view_data_normalisasi.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('view_data_normalisasi', [], true)
+ 5 APPPATH\Controllers\Home.php(70): view('view_data_normalisasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->viewnormalisasi()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\laragon\\www\\WP UAS\\public\\index.php')
